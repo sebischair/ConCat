@@ -1,6 +1,6 @@
 # *Lexical Substitution is not Synonym Substitution: On the Importance of Producing Contextually Relevant Word Substitutes*
 
-![ConCat](concat.png "ConCat")
+![ConCat](concat.png =250x250 "ConCat")
 
 ## Software
 In this repository, you will find the following files:
