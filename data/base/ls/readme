@@ -1,0 +1,84 @@
+The final release with trial test and gold 13/11/07
+
+contents of the tar file :-
+
+readme: this readme
+task10documentation.pdf: documentation as released with the trial data
+lexsub.dtd: latest release as supplied with test data
+
+trial/lexsub_trial.xml: trial input data
+trial/gold.trial: gold standard for best and oot trial evaluation
+trial/mwgold.trial: gold standard for mw trial evaluation
+trial/BL.out:           trial baseline system file for best measures
+trial/BLoutof10.out:    trial baseline system file for oot measures
+trial/dummyMW.out:     dummy system for testing mw measures on trial data (not a proper baseline)
+
+test/lexsub_test.xml: the test input data
+
+scoring/gold: the gold_file for the best and oot tasks (test version)
+scoring/mwgold: the gold_file for the multiword task (test version)
+
+scoring/MRsamples: a list of the words (with part of speech) where
+sentence selection was performed manually. Used by scoreFA.pl for the
+"further analysis" results.
+
+scoring/mwids: a list of ids identified as multiwords by having a
+majority vote by 2 or more annotators for the same multiword
+(lemmatised phrase). Used by scoreFA.pl for the "further analysis"
+results.
+
+scoring/score.pl: the scorer. This should be run as described in
+section 3 of the document that was released with the trial run data
+and is also available at
+http://nlp.cs.swarthmore.edu/semeval/tasks/task10/task10documentation.pdf
+This is virtually the same version that was released to participants
+with the test data but with a few minor tweaks in the comments and to
+the printouts.
+
+
+scoring/scoreFA.pl: A copy of score.pl but with comments taken out so
+that the further analysis on NMWT, NMWS, RAND and MAN subsets will be
+performed.
+* NMWT only do ids where the target word has not been identified as a
+multiword, i.e. the id does not appear in the mwids file
+* NMWS only using single word substitutes from the gold standard
+* MAN only score using words from the MAN sample, that is words where
+the test sentences were selected manually
+* RAND only score using words from the RAND sample, that is words
+where the test sentences were selected randomly
+
+NB run scoreFA.pl from the directory where you have stored the files
+mwids and MRsamples
+
+----------------------------------
+Changes to scorer from trial release (8 Jan 2007)
+
+any hyphens changed to spaces to allow conformity between annotators,
+and annotators and systems
+
+"non" + space (or hyphen) is conjoined to the following word
+e.g. non-alcoholic or non alcoholic -> nonalcoholic
+
+American -> British spelling mapping for some substitutes in the gold
+standard
+
+added fix to ensure "pn" (proper name) items are not used for scoring
+
+fixed oot measure to enforce that a maximum of 10 items are used. If
+there are more in the system file then the extra are discarded
+
+Diana McCarthy 11/4/07
+
+----------------------------------------------------------------
+
+fixed oot measure so that if there are duplicates in the first 10
+system responses of any item (after the corrections for hypenation and
+American-British spelling) a warning is given. Whilst it is possible
+to get higher oot precision and recall by providing duplicates for
+substitutes that the system is more certain of, results SHOULD NOT be
+compared to systems which do not include duplicates. This does not
+affect the mode score although there will be less chance of finding
+the mode for an item if there are less than 10 different substitutes
+provided.
+
+Diana McCarthy 25/9/07

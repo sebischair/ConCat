@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!ELEMENT corpus (lexelt+)>
+<!ATTLIST corpus lang CDATA #REQUIRED>
+
+<!ELEMENT lexelt (instance+)>
+<!ATTLIST lexelt item CDATA #REQUIRED>
+
+<!ELEMENT instance (context)>
+<!ATTLIST instance id CDATA #REQUIRED>
+
+<!ELEMENT context (#PCDATA | head)*>
+<!ELEMENT head (#PCDATA)>
