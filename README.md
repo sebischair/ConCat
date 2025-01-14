@@ -2,8 +2,17 @@
 
 ![ConCat](concat.png "ConCat")
 
-## Software
-In this repository, you will find the following files:
+## Getting Started
+Using `Concat` is simple! First, simply install the package using the following command:
 
-- `lex_sub.py`: class code for our ConCat method
-- `data`: all data for reproducing our results, including the benchmark datasets
+`pip install concat-ls`
+
+Then, load ConCat and getting LSing!
+
+`from concat import ConCat`
+
+`X = ConCat()`
+
+`X.lexsub("hello world", "hello", K=5)`
+
+The `lexsub` function takes the following parameters: `lexsub([CONTEXT (sentence)], [TARGET WORD (taregt)], [TOPK (K)])`. By default, `K=5`.
