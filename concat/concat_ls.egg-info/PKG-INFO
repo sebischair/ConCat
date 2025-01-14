@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: concat-ls
+Version: 1.0.2
+Summary: Repository for ConCat: a simple and intuitive method for English lexical substitution.
+Author-email: Juraj Vladika <juraj.vladika@tum.de>, Stephen Meisenbacher <stephen.meisenbacher@tum.de>
+Maintainer-email: Juraj Vladika <juraj.vladika@tum.de>, Stephen Meisenbacher <stephen.meisenbacher@tum.de>
+License: MIT License
+        
+        Copyright (c) 2025 sebis
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/sebischair/ConCat
+Project-URL: Documentation, https://github.com/sebischair/ConCat
+Project-URL: Repository, https://github.com/sebischair/ConCat
+Project-URL: Issues, https://github.com/sebischair/ConCat/issues
+Keywords: lexical substitution,lexical semantics,word representation,natural language processing
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: spacy
+Requires-Dist: torch
+Requires-Dist: transformers
+
+# *Lexical Substitution is not Synonym Substitution: On the Importance of Producing Contextually Relevant Word Substitutes*
+
+![ConCat](https://github.com/sebischair/ConCat/blob/main/concat.png?raw=true "ConCat")
+
+## Getting Started
+Using `Concat` is simple! First, simply install the package using the following command:
+
+`pip install concat-ls`
+
+Then, load ConCat and getting LSing!
+
+`from concat import ConCat`
+
+`X = ConCat()`
+
+`X.lexsub("hello world", "hello", K=5)`
+
+The `lexsub` function takes the following parameters: `lexsub([CONTEXT (sentence)], [TARGET WORD (taregt)], [TOPK (K)])`. By default, `K=5`.
