@@ -8,7 +8,7 @@ Using `Concat` is simple! First, simply install the package using the following 
 
 `pip install concat-ls`
 
-Then, load ConCat and getting LSing!
+Then, load ConCat and get LSing!
 
 `from concat import ConCat`
 
