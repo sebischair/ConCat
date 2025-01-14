@@ -1,6 +1,6 @@
 # *Lexical Substitution is not Synonym Substitution: On the Importance of Producing Contextually Relevant Word Substitutes*
 
-![ConCat](concat.png "ConCat")
+![ConCat](https://github.com/sebischair/ConCat/blob/main/concat.png?raw=true "ConCat")
 
 ## Getting Started
 Using `Concat` is simple! First, simply install the package using the following command:
