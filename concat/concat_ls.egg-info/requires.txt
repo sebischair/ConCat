@@ -1,5 +1,0 @@
-nltk
-numpy
-spacy
-torch
-transformers
