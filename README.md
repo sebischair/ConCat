@@ -1,4 +1,5 @@
-# *Lexical Substitution is not Synonym Substitution: On the Importance of Producing Contextually Relevant Word Substitutes*
+# ConCat
+Repository containing the code described in the ICAART 2025 paper: *Lexical Substitution is not Synonym Substitution: On the Importance of Producing Contextually Relevant Word Substitutes*
 
 ![ConCat](https://github.com/sebischair/ConCat/blob/main/concat.png?raw=true "ConCat")
 
